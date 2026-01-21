@@ -13,7 +13,9 @@ console.log(`Длина строки: ${myInfoText.length} символа`);
 console.log(`Первый символ: '${myInfoText[0]}'\nПоследний символ: '${myInfoText[myInfoText.length - 1]}'`);
 
 let userName = prompt("Как вас зовут?");
+let userAge = prompt("Сколько вам лет?");
 
 userName = userName.trim().toLowerCase()
+userAge = Number(userAge.trim());
 
-alert(`Вас зовут ${userName}`);
+alert(`Вас зовут ${userName} и вам ${userAge} лет`);
