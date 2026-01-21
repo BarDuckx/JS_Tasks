@@ -11,3 +11,9 @@ myInfoText = myInfoText.replaceAll(programmingLanguage, programmingLanguage.toUp
 console.log(myInfoText);
 console.log(`Длина строки: ${myInfoText.length} символа`);
 console.log(`Первый символ: '${myInfoText[0]}'\nПоследний символ: '${myInfoText[myInfoText.length - 1]}'`);
+
+let userName = prompt("Как вас зовут?");
+
+userName = userName.trim().toLowerCase()
+
+alert(`Вас зовут ${userName}`);
