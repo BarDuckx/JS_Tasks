@@ -43,3 +43,14 @@ const indexOfWord = userText.indexOf(wordFromText);
 const string_2 = userText.slice(0, indexOfWord);
 
 alert(`Результат: ${string_2}`);
+
+
+let javaScriptDescription = "JavaScript — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript. JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений."
+
+javaScriptDescription = javaScriptDescription.slice(1, Math.floor(javaScriptDescription.length / 2));
+javaScriptDescription = javaScriptDescription.replaceAll("а", "А");
+javaScriptDescription = javaScriptDescription.replaceAll(" ", "");
+javaScriptDescription = javaScriptDescription.repeat(3);
+
+console.log(`Символ в середине: '${javaScriptDescription[Math.floor(javaScriptDescription.length / 2)]}'`);
+console.log(javaScriptDescription);
