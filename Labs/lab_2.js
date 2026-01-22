@@ -93,12 +93,13 @@ if (Question3) {
 }
 
 
+let i = 0;
+
 do {
-    let i = 0;
     let newStudent = prompt('Введите имя нового студента!');
     newStudent = newStudent.trim();
     if (newStudent) {
         alert(`Добро пожаловать, ${newStudent}!`);
+        i++;
     }
-    i++;
 } while (i < 3);
