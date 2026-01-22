@@ -111,3 +111,25 @@ for (let i = 1; i <= 100; i++) {
     sum += i;
 }
 alert(`Сумма чисел от 1 до 100 равна: ${sum}`);
+
+
+const clientName = "Игорь";
+let clientSpendForAllTime = 110;
+let clientSpendToday = 25;
+let discount = 0;
+
+if (clientSpendForAllTime > 500) {
+    discount = 30;
+    alert(`Вам предоставляется скидка в ${discount}%`);
+} else if (clientSpendForAllTime > 300 && clientSpendForAllTime <= 500) {
+    discount = 20;
+    alert(`Вам предоставляется скидка в ${discount}%`);
+} else if (clientSpendForAllTime > 100 && clientSpendForAllTime <= 300) {
+    discount = 10;
+    alert(`Вам предоставляется скидка в ${discount}%`);
+}
+
+clientSpendForAllTime += clientSpendToday;
+clientSpendToday *= (100 - discount) / 100;
+
+alert(`Спасибо, ${clientName}! К оплате ${clientSpendToday}$. За все время в нашем ресторане вы потратили ${clientSpendForAllTime}$`);
