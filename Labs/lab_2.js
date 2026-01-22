@@ -137,3 +137,16 @@ if (isNaN(clientSpendForAllTime) || isNaN(clientSpendToday)) {
 
     alert(`Спасибо, ${clientName}! К оплате ${clientSpendToday}$. За все время в нашем ресторане вы потратили ${clientSpendForAllTime}$`);
 }
+
+
+const userCustonPassword = prompt("Введите пароль");
+
+if (userCustonPassword.length < 3 || userCustonPassword.length > 20) {
+    alert("Пароль не удовлетворяет условиям! Перезагрузите страницу и попробуйте ввести его еще раз.");
+} else if (!/[A-ZА-ЯЁ]/.test(userCustonPassword)) {
+    alert("Пароль не удовлетворяет условиям! Перезагрузите страницу и попробуйте ввести его еще раз.");
+} else if (!/\d/.test(userCustonPassword)) {
+    alert("Пароль не удовлетворяет условиям! Перезагрузите страницу и попробуйте ввести его еще раз.");
+} else {
+    alert("Пароль валидный. Добро пожаловать в аккаунт!");
+}
