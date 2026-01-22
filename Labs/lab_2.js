@@ -12,3 +12,60 @@ if (userLogin === existedUserLogin && userPassword === existedUserPassword) {
 } else {
     alert("Логин и (или) Пароль введены неверно!");
 }
+
+
+const correctAnswer1 = 4;
+const correctAnswer2 = 4;
+const correctAnswer3 = 1;
+const correctAnswer4 = 12;
+const correctAnswer5 = 6;
+
+let correctAnswers = 0;
+let incorrectAnswers = 0;
+
+const UserAnswer1 = Number(prompt("Сколько будет 2 + 2?"));
+if (UserAnswer1 === correctAnswer1) {
+    alert("Ответ верный!");
+    correctAnswers++;
+} else {
+    alert("Ответ неверный!");
+    incorrectAnswers++;
+}
+
+const UserAnswer2 = Number(prompt("Сколько будет 2 * 2?"));
+if (UserAnswer2 === correctAnswer2) {
+    alert("Ответ верный!");
+    correctAnswers++;
+} else {
+    alert("Ответ неверный!");
+    incorrectAnswers++;
+}
+
+const UserAnswer3 = Number(prompt("У Пети было 5 яблок. 3 из них он съел, 1 отдал другу. Сколько яблок у Пети осталось?"));
+if (UserAnswer3 === correctAnswer3) {
+    alert("Ответ верный!");
+    correctAnswers++;
+} else {
+    alert("Ответ неверный!");
+    incorrectAnswers++;
+}
+
+const UserAnswer4 = Number(prompt("У Маши было 10 конфет. 2 она съела, 1 отдала другу. После мама дала Маше еще 5 конфет. Сколько в итоге конфет осталось у Маши?"));
+if (UserAnswer4 === correctAnswer4) {
+    alert("Ответ верный!");
+    correctAnswers++;
+} else {
+    alert("Ответ неверный!");
+    incorrectAnswers++;
+}
+
+const UserAnswer5 = Number(prompt("Сколько будет 2 + 2 * 2?"));
+if (UserAnswer5 === correctAnswer5) {
+    alert("Ответ верный!");
+    correctAnswers++;
+} else {
+    alert("Ответ неверный!");
+    incorrectAnswers++;
+}
+
+alert(`Конец теста! Правильные ответ - ${correctAnswers}; Неправильные ответы - ${incorrectAnswers}`);
