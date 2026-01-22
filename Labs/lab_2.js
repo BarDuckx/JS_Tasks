@@ -69,3 +69,25 @@ if (UserAnswer5 === correctAnswer5) {
 }
 
 alert(`Конец теста! Правильные ответ - ${correctAnswers}; Неправильные ответы - ${incorrectAnswers}`);
+
+
+const Question1 = confirm("JavaScript появился в 1995 году?");
+if (Question1) {
+    alert("Верно");
+} else {
+    alert("JavaScript появился в 1995 году");
+}
+
+const Question2 = confirm("Спецификация JavaScript называется ECMAScript?");
+if (Question2) {
+    alert("Верно");
+} else {
+    alert("Спецификация JavaScript называется ECMAScript");
+}
+
+const Question3 = confirm("JavaScript был создан за 1 месяц?");
+if (Question3) {
+    alert("JavaScript был создан за 10 дней");
+} else {
+    alert("Верно");
+}
