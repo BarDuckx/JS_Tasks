@@ -29,8 +29,27 @@ const getSumOfNumbers = (number, type) => {
         }
     }
     return sum;
-}
+};
 
 console.log(getSumOfNumbers(10, 'odd'));
 console.log(getSumOfNumbers(10, 'even'));
 console.log(getSumOfNumbers(10));
+
+
+const getDivisorsCount = number => {
+    let count = 0;
+    if (Number.isInteger(number) === false || number <= 0) {
+        alert('number должен быть целым числом или больше нуля!');
+    } else {
+    for (let i = 1; i <= number; i++) {
+        if (number % i === 0) {
+            count++;
+        }
+    }
+    return count;
+    }
+};
+
+console.log(getDivisorsCount(4));
+console.log(getDivisorsCount(5));
+console.log(getDivisorsCount(12));
