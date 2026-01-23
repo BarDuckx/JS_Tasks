@@ -67,3 +67,30 @@ const checkQuestionAnswer = (question, correctAnswer) => {
 checkQuestionAnswer('Арбуз это фрукт или ягода?', 'Ягода');
 checkQuestionAnswer('Сколько в среднем зубов у взрослого человека?', '32');
 checkQuestionAnswer('Как называется самая маленькая птица в мире?', 'Колибри');
+
+
+const showSuccessMessage = message => {
+    console.log(message);
+}
+
+const showErrorMessage = message => {
+    console.error(message);
+}
+
+const text = 'Привет! Как дела! Давно мы с тобой не виделись.'
+const checkTextOnErrorSymbol = (text, errorSymbol, successCallback, errorCallback) => {
+    let foundError = false;
+    
+    for (let i = 0; i < text.length; i++) {
+        if (text[i] === errorSymbol) {
+            errorCallback(`Найден запрещённый символ "${errorSymbol}" под индексом ${i}.`);
+            foundError = true;
+        }
+    }
+    
+    if (!foundError) {
+        successCallback("В данном тексте нет запрещенных символов");
+    }
+};
+
+checkTextOnErrorSymbol(text, 'а', showSuccessMessage, showErrorMessage);
