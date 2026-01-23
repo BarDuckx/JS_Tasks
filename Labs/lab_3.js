@@ -53,3 +53,17 @@ const getDivisorsCount = number => {
 console.log(getDivisorsCount(4));
 console.log(getDivisorsCount(5));
 console.log(getDivisorsCount(12));
+
+
+const checkQuestionAnswer = (question, correctAnswer) => {
+    const userAnswer = prompt(question);
+    if (userAnswer.trim().toLowerCase() === correctAnswer.trim().toLowerCase()) {
+        return alert('Ответ верный');
+    } else {
+        return alert('Ответ неверный');
+    }
+}
+
+checkQuestionAnswer('Арбуз это фрукт или ягода?', 'Ягода');
+checkQuestionAnswer('Сколько в среднем зубов у взрослого человека?', '32');
+checkQuestionAnswer('Как называется самая маленькая птица в мире?', 'Колибри');
