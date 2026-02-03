@@ -17,3 +17,17 @@ giveParcel(peopleWaiting);
 while (peopleWaiting.length > 0) {
     leaveQueueWithoutParcel(peopleWaiting);
 }
+
+
+const getSumOfSequence = number => {
+    const sequence = [];
+
+    for (let i = 1; i <= number; i++) {
+        sequence.push(i);
+    }
+
+    const sum = sequence[0] + sequence[sequence.length - 1];
+    return sum;
+}
+
+console.log(getSumOfSequence(5));
