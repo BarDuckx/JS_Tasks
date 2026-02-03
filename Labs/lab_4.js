@@ -73,3 +73,39 @@ const goodEstimations = clientsEstimations.filter(estimation => estimation > 5).
 const notGoodEstimations = clientsEstimations.filter(estimation => estimation <= 5).length;
 
 alert(`Всего положительных оценок: ${goodEstimations}; Всего отрицательных оценок: ${notGoodEstimations}.`);
+
+
+const numbers = [10, 4, 100, -5, 54, 2]
+
+let sumOfCubes1 = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    sumOfCubes1 += numbers[i] ** 3;
+}
+
+console.log(`Сумма кубов массива циклом for: ${sumOfCubes1}`);
+
+let sumOfCubes2 = 0;
+
+for (let number of numbers) {
+    sumOfCubes2 += number ** 3;
+}
+
+console.log(`Сумма кубов массива циклом for of: ${sumOfCubes2}`);
+
+let sumOfCubes3 = 0;
+
+numbers.forEach(number => {
+    sumOfCubes3 += number ** 3;
+});
+
+console.log(`Сумма кубов массива методом forEach: ${sumOfCubes3}`);
+
+let sumOfCubes4 = 0;
+
+numbers.reduce((acc, number) => {
+    sumOfCubes4 += number ** 3;
+    return acc;
+}, 0);
+
+console.log(`Сумма кубов массива методом reduce: ${sumOfCubes4}`);
