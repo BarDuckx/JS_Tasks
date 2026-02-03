@@ -53,3 +53,23 @@ updatedPrices = prices.map(price => price + 0.5);
 coffees.forEach((coffee, index) => {
     alert(`Кофе ${coffee} сейчас стоит ${updatedPrices[index]} евро.`);
 });
+
+
+const clientsEstimations = [];
+
+const askClientToGiveEstimation = () => {
+    const esttimation = Number(prompt('Как вы оцениваете нашу кофейню от 1 до 10?'));
+
+    if (esttimation >= 1 && esttimation <= 10) {
+        clientsEstimations.push(esttimation);
+    }
+}
+
+for (let i = 0; i < 5; i++) {
+    askClientToGiveEstimation();
+}
+
+const goodEstimations = clientsEstimations.filter(estimation => estimation > 5).length;
+const notGoodEstimations = clientsEstimations.filter(estimation => estimation <= 5).length;
+
+alert(`Всего положительных оценок: ${goodEstimations}; Всего отрицательных оценок: ${notGoodEstimations}.`);
