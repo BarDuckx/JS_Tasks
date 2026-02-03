@@ -44,3 +44,12 @@ if (coffeeIndex !== -1) {
 } else {
     alert('К сожалению, такого вида кофе нет в наличии');
 }
+
+
+const prices = [1.5, 1, 2];
+
+updatedPrices = prices.map(price => price + 0.5);
+
+coffees.forEach((coffee, index) => {
+    alert(`Кофе ${coffee} сейчас стоит ${updatedPrices[index]} евро.`);
+});
